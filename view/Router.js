@@ -17,7 +17,6 @@ web.get('/login', function (req, res) {
 })
 
 web.post('/buildpj', function (req, res) {
-
   var name = req.body.name
   
   var pj = buildPj(name)
