@@ -1,6 +1,7 @@
 var express = require('express')
 var web = express.Router()
 var parser = require('body-parser')
+var gameloop = require('../model/game/GameLoop')
 
 web.use(parser.urlencoded({extended: true}))
 
@@ -8,6 +9,7 @@ var buildPj = require('../model/generateplayer/BuildPlayer')
 
 web.get('/', function (req, res) {
   res.sendfile('view/buildpj/index.html')
+  gameloop()
 })
 
 web.get('/login', function (req, res) {
