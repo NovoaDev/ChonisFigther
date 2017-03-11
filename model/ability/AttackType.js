@@ -1,16 +1,22 @@
 var attack = require('./Attack')
 
-var result
-probaIsTrue = false
+function attackType (player, probability) {
+	var result
+	var att
 
-function attackType (player) {
-
-  var att = attack(player)
+	probaIsTrue = false
 
   if (probaIsTrue) {
-    console.log("SKILLS")
+    att = attack(player)
+	  type = "skill"
   } else {
-	  result = att
+	  att = attack(player)
+	  type = "Attack"
+  }
+
+  result = {
+		type: type,
+  	att: att
   }
 
   console.log(result.damage + ' result')

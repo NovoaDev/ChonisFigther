@@ -1,15 +1,8 @@
 { 
   "name": "ChonisFighter",
   "version": "0.1.0",
-  "description": "Minijuego de pelea sobre android usando tecnologias { Nodejs, Mysql, Android studio, entre otras }",
+  "description": "Minijuego de pelea sobre android usando tecnologias Nodejs, Mysql, Android studio, entre otras",
   "main": "server.js",
-  "scripts": {
-    "start": "gulp copy && nodejs server.js",
-    "lint": "standard",
-    "lintfix": "standard --fix",
-    "test": "mocha",
-    "github": "gulp copy && standard && mocha"
-  },
   "author": "Majo&Lola",
   "license": "MIT",
   "dependencies": {
@@ -27,5 +20,12 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "standard": "^9.0.0"
+  },
+    "scripts": {
+    "start": "gulp copy && nodejs server.js",
+    "lint": "standard",
+    "copy": "gulp copy",
+    "test": "mocha",
+    "github": "gulp copy && standard && mocha"
   }
 }
