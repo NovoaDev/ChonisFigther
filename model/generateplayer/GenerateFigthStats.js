@@ -6,21 +6,21 @@ function figthStats (stats) {
   var vitality = stats.vitality
   var energy = stats.energy
 
-  var attMin = 100
-  var attMax = 150
+  var attMin = 150
+  var attMax = 200
   var shield = 10
-  var life = 500
+  var life = 1500
   var mana = 100
 
   var x
   for (x = 0; x != strench; x++) {
-    attMin += rdm(0, 10)
-    attMax += rdm(0, 10)
-    life += rdm(0, 5)
+    attMin += rdm(1, 10)
+    attMax += rdm(1, 10)
+    life += rdm(1, 5)
   }
 
   for (x = 0; x != agility; x++) {
-    shield += rdm(0, 10)
+    shield += rdm(10, 40)
   }
 
   for (x = 0; x != vitality; x++) {

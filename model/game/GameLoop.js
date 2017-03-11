@@ -3,21 +3,22 @@ var player1 = require('./Player1')
 var cpuPlayer = require('./CpuPlayer')
 var checkTurn = require('./CheckTurn')
 var figth = require('./Figth')
-var turn = rdm(0, 1)
-var game = true 
-
-
-// p0r no pasar db
-//
-var buildPlayer = require('../generateplayer/BuildPlayer')
-playerImport = buildPlayer('lola')
-//
-//
-
-player = new player1(playerImport)
-cpu = new cpuPlayer('cpu')
 
 function gameLoop () {
+  var turn = rdm(0, 1)
+  var game = true 
+
+
+  // p0r no pasar db
+  //
+  var buildPlayer = require('../generateplayer/BuildPlayer')
+  playerImport = buildPlayer('lola')
+  //
+  //
+
+  player = new player1(playerImport)
+  cpu = new cpuPlayer('cpu')
+
   while (game) {
 	  if (player.life > 0 && cpu.life > 0) {
       if (turn == 0) {
@@ -49,18 +50,19 @@ function gameLoop () {
       game = false
     }
   }
-}
 
-function updatePlayer (result) {
-  cpu.life -= result
-  console.log('Player1 use : ' + "ATT" + ' Dmg : ' + result + '')
-  console.log('--------------------------')
-}
+  function updatePlayer (result) {
+    cpu.life -= result.damage
+    console.log('Player1 use : ' + result.skill  + ' Dmg : ' + result.damage + '')
+    console.log('--------------------------')
+  }
 
-function updateCpu (result) {
-  player.life -= result
-  console.log('Cpu use : ' + "ATT" + ' Dmg : ' + result + '')
-  console.log('--------------------------')
+  function updateCpu (result) {
+    player.life -= result.damage
+    console.log('Cpu use : ' + result.skill + ' Dmg : ' + result.damage + '')
+    console.log('--------------------------')
+  }
+
 }
 
 module.exports = gameLoop

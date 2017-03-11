@@ -1,7 +1,6 @@
-var resultturn
-
 function checkTurn (player) {
   console.log(player.name + ' turn ')
+  var resultturn
   if (player.turn == 0) {
     resultturn = true
   } else {

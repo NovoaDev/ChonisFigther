@@ -4,7 +4,7 @@ function copy (c) {
 	  damage: c.damage,
 	  state: c.state,
 	  turn: c.turn,
-	  mana: c.mama
+	  mana: c.mana
 	  }
 }
 
