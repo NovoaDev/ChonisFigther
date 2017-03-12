@@ -35,8 +35,9 @@ function attackType (player) {
       damage: attFinal,
       state: 'Not',
       turn: 0,
-      mana: 0 
-  	}
+      mana: 0,
+      type: 'att' 
+    }
   }
 
   return {
@@ -44,7 +45,8 @@ function attackType (player) {
     damage: aux.damage,
     state: aux.state,
     turn: aux.turn,
-    mana: aux.mana
+    mana: aux.mana,
+    type: aux.type
   }
 }
 

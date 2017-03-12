@@ -21,19 +21,19 @@ function generateSkills (totalPts, skill) {
   do {
     skillAux = seleccionSkills[rdm(0, seleccionSkills.length - 1)]
 	 	if (skillAux != 'undefined') {
-	   // if (skillAux != skill1 && skillAux != skill2) {
-   if (skill1 == '') {
-		    skill1 = skillAux
-		    y++
-	  	} else if (skill2 == '') {
-	  	  skill2 = skillAux
-		    y++
-	  	} else if (skill3 == '') {
-	  	  skill3 = skillAux
-		    y++
-	  	}
- }
-  // }
+      if (skillAux != skill1 && skillAux != skill2) {
+        if (skill1 == '') {
+		      skill1 = skillAux
+		      y++
+	  	  } else if (skill2 == '') {
+	  	    skill2 = skillAux
+		      y++
+	  	  } else if (skill3 == '') {
+	  	    skill3 = skillAux
+		      y++
+	  	  }
+      }
+    }
   } while (y < 3)
 
   return {

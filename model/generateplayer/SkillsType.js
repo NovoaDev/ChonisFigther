@@ -1,9 +1,9 @@
 function SkillType () { 
 
-	var skillHard = [ 'Stung', 'Stung', 'Stung', 'Stung' ]
+	var skillHard = [ 'Stung', 'FishingNet', 'Critical', 'Stung' ]
 	// 'Tumbar Arma', 'Lanzar Red', 'Stung', 'Evasion', 'Critical', 'Mascota']
 
-	var skillMed = [ 'Stung', 'Stung', 'Stung', 'Stung' ]
+	var skillMed = [ 'Stung', 'FishingNet', 'Critical', 'Stung' ]
 	// 'Golpetazo',
 	// 'Lanzar red',
 	// 'Stung',
@@ -12,7 +12,7 @@ function SkillType () {
 	// 'Pot de HP',
 	// 'Bomba de Confusion']
 
-	var skillSoft = [ 'Stung', 'Stung', 'Stung', 'Stung' ]
+	var skillSoft = [ 'Stung', 'FishingNet', 'Critical', 'Stung' ]
 	// 'Golpetazo',
 	// 'Leon HP',
 	// 'Bersek',

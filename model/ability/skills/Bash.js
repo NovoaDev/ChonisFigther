@@ -1,18 +1,18 @@
 var rdm = require('../../util/RandomNumber')
 
-function critical (player) {
+function bash (player) {
 	dmg = rdm(player.attMin, player.attMax)
 	dmgWeapon = rdm (player.attWeaponMin, player.attWeaponMax)
-  dmgFinal = (dmg + dmgWeapon) * 2
+  dmgFinal = (dmg + dmgWeapon) + 10
 
   return {
-    skill: 'Critical',
+    skill: 'Bash',
 	  damage: dmgFinal,
-	  state: 'Not',
-	  turn: 0,
-	  mana: 15,
+	  state: 'Bash',
+	  turn: 1,
+	  mana: 0,
 	  type: 'att'
   }
 }
 
-module.exports = critical
+module.exports = bash

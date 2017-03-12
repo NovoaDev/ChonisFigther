@@ -19,7 +19,7 @@ function gameLoop () {
 
   player = new player1(playerImport)
   cpu = new cpuPlayer('cpu')
-
+ 
   while (game) {
     if (player.life > 0 && cpu.life > 0) {
       if (turn == 0) {
@@ -52,6 +52,11 @@ function gameLoop () {
     cpu.state = turn.state
     cpu.turn = turn.turn
     console.log('Player1 use : ' + result.skill  + ' Dmg : ' + result.damage + '')
+    console.log('   -= cpu Stats =-  ')
+    console.log('Life : ' + cpu.life + ' Points')
+    console.log('State : ' + cpu.state + ' Delay : ' + cpu.turn)
+    console.log('Mana : ' + cpu.mana + ' Points')
+    console.log('--------------------------')
     console.log('--------------------------')
   }
 
@@ -60,23 +65,13 @@ function gameLoop () {
     player.state = turn.state
     player.turn = turn.turn
     console.log('Cpu use : ' + result.skill + ' Dmg : ' + result.damage + '')
-    console.log('--------------------------')
-  }
-
-  function viewStats () {
-    console.log(' -== Player ==- ')
-    console.log('   -= Stats =-  ')
+    console.log('   -= PLAYER 1 Stats =-  ')
     console.log('Life : ' + player.life + ' Points')
     console.log('State : ' + player.state + ' Delay : ' + player.turn)
     console.log('Mana : ' + player.mana + ' Points')
     console.log('--------------------------')
-    console.log(' -== Cpu ==- ')
-    console.log('   -= Stats =-  ')
-    console.log('Life : ' + cpu.life + ' Points')
-    console.log('State : ' + cpu.state + ' Delay : ' + cpu.turn)
-    console.log('Mana : ' + cpu.mana + ' Points')
-    console.log('--------------------------')
   }
+
 }
 
 module.exports = gameLoop

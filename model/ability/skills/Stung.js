@@ -6,7 +6,8 @@ function stung (player) {
 	  damage: dmgFinal,
 	  state: 'Stung',
 	  turn: 2,
-	  mana: 25
+	  mana: 25,
+	  type: 'att'
   }
 }
 
