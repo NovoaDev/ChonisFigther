@@ -1,5 +1,9 @@
+var rdm = require('../../util/RandomNumber')
+
 function critical (player) {
-  dmgFinal = (player.attMax + player.attWeaponMax) * 2
+	dmg = rdm(player.attMin, player.attMax)
+	dmgWeapon = rdm (player.attWeaponMin, player.attWeaponMax)
+  dmgFinal = (dmg + dmgWeapon) * 2
 
   return {
     skill: 'Critical',

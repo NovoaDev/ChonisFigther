@@ -5,6 +5,7 @@ function checkTurn (player) {
     resultturn = true
   } else {
   	resultturn = false
+  	console.log(player.name + ' ' + player.state)
   } 
   
   return resultturn
